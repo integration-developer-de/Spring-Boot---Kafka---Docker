@@ -3,6 +3,39 @@
 # Spring Boot Application Technical Design Document
 ## Introduction
 - **Purpose**: Outline the design for a Spring Boot application that sends a string via API to another Spring Boot application, which then sends the string to a Kafka server hosted by Docker, consumes the message directly, and logs the message.
+## Structure
+´´´ṕlaintext
+.
+├── HELP.md
+├── kafka.yml
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── postgree.yml
+├── Readme.md
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           └── spring_boot_kafka
+│   │   │               ├── config
+│   │   │               │   └── KafkaTopicConfig.java
+│   │   │               ├── consumer
+│   │   │               │   └── KafkaConsumer.java
+│   │   │               ├── controller
+│   │   │               │   └── MessageController.java
+│   │   │               ├── models
+│   │   │               │   └── Order.java
+│   │   │               ├── producer
+│   │   │               │   └── KafkaProducer.java
+│   │   │               └── SpringBootKafkaApplication.java
+│   │   └── resources
+│   │       ├── application.yml
+│   │       ├── banner.txt
+│   │       ├── static
+│   │       └── templates
+´´´
 ## System Architecture
 - **Overview**: High-level architecture of the system including Spring Boot applications, Kafka server, and Docker containers.
 - **Components**:
